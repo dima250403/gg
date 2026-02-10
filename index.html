@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini CS Shooter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="hud">
+        <h1>Mini CS Shooter</h1>
+        <p>
+          Управление: <strong>WASD</strong> — движение, <strong>мышь</strong> — прицел,
+          <strong>ЛКМ</strong> — огонь, <strong>R</strong> — перезарядка.
+        </p>
+        <div class="stats">
+          <span id="health">HP: 100</span>
+          <span id="ammo">Ammo: 30 / 90</span>
+          <span id="score">Фраги: 0</span>
+          <span id="wave">Волна: 1</span>
+        </div>
+      </section>
+      <canvas id="game" width="960" height="540" aria-label="Игровое поле"></canvas>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
