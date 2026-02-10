@@ -1,4 +1,4 @@
-# 3D Shooter на Unity (не HTML)
+3D Shooter на Unity
 
 Сделал версию шутера под **Unity 3D** (URP/Standard — без привязки к HTML).
 
