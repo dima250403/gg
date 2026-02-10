@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 3D Shooter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="game" width="960" height="640"></canvas>
+
+    <div id="hud">
+      <div id="stats">HP: 100 | Kills: 0 | Enemy HP: 8</div>
+      <div id="msg">W/S — move, A/D — rotate, SPACE — shoot, ESC — unlock</div>
+    </div>
+
+    <div id="crosshair">+</div>
+
+    <div id="overlay">
+      <h1>HTML 3D Shooter</h1>
+      <p>Нажми <b>Start</b>, чтобы захватить мышь и начать игру.</p>
+      <button id="startBtn">Start</button>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

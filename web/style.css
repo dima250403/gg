@@ -1,0 +1,84 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #0f0f14;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Consolas, Monaco, monospace;
+}
+
+#game {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  image-rendering: pixelated;
+}
+
+#hud {
+  position: fixed;
+  left: 12px;
+  top: 10px;
+  z-index: 10;
+  padding: 8px 10px;
+  border: 1px solid #ffffff30;
+  background: #00000066;
+  border-radius: 8px;
+}
+
+#stats {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+#msg {
+  font-size: 14px;
+  color: #d5d5e7;
+}
+
+#crosshair {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 30px;
+  color: #ffffff;
+  text-shadow: 0 0 8px #fff;
+  user-select: none;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 14px;
+  text-align: center;
+  background: #000000b5;
+  z-index: 20;
+}
+
+#overlay.hidden {
+  display: none;
+}
+
+button {
+  margin: 0 auto;
+  padding: 10px 18px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ffffff33;
+  background: #2f6fed;
+  color: #fff;
+  cursor: pointer;
+}
