@@ -1,26 +1,35 @@
-# 3D Shooter (Python, не HTML)
+# 3D Shooter на Unity (не HTML)
 
-Простой прототип шутера от первого лица на **Python + Ursina**.
+Сделал версию шутера под **Unity 3D** (URP/Standard — без привязки к HTML).
 
-## Что есть
-- 3D-сцена с освещением и полом
-- Управление от первого лица (WASD + мышь + Space)
-- Стрельба ЛКМ (hit-scan)
-- Враги-кубы, которые идут к игроку
-- Здоровье игрока и HUD
-- Респавн врагов
+## Что внутри
+- FPS-управление (WASD + мышь + прыжок)
+- Стрельба через `Raycast`
+- Враги с HP, преследованием и уроном по игроку
+- Спавнер врагов
+- HUD (HP, kills, enemies)
 
-## Запуск
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python shooter3d.py
-```
+## Как запустить в Unity
+1. Открой Unity Hub.
+2. `Add project from disk` и выбери эту папку.
+3. Создай сцену `MainScene`.
+4. Добавь:
+   - `Player` (Capsule + CharacterController + `PlayerController.cs`)
+   - Камеру как child объекта `Player`.
+   - `GameManager` (пустой объект + `GameManager.cs`)
+   - `EnemySpawner` (пустой объект + `EnemySpawner.cs`)
+   - `Ground` (Plane с Collider)
+5. Создай prefab `Enemy`:
+   - Cube/Capsule + Collider + (опционально) Rigidbody (isKinematic=true)
+   - добавь `EnemyController.cs`.
+6. На `EnemySpawner` укажи prefab врага и число стартовых врагов.
+7. На `Player` в поле `cameraRoot` укажи Transform камеры.
+8. На `GameManager` привяжи ссылки на `PlayerController` и `EnemySpawner`.
+9. Нажми Play.
 
 ## Управление
 - `W/A/S/D` — движение
 - `Mouse` — обзор
-- `Left Click` — выстрел
 - `Space` — прыжок
-- `Esc` — выход
+- `Left Mouse` — выстрел
+- `Esc` — разблокировать курсор
