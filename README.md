@@ -82,3 +82,20 @@
   - `set UNITY_BIN=C:\Path\To\Unity.exe`
   - `open_unity_no_hub.bat`
 - Если хочешь просто играть без Unity: `play_now.bat`
+
+
+## HTML версия (3D в браузере)
+Теперь есть полноценная web-версия игры на HTML/CSS/JS:
+
+- Открой `web/index.html` напрямую, или
+- Запусти локальный сервер:
+  - Windows: `start_html.bat`
+  - Linux/macOS: `./start_html.sh`
+- Затем открой `http://localhost:8080/web/`
+
+Управление в HTML-версии:
+- `W/S` — движение
+- `A/D` — поворот
+- `Mouse` — обзор (после Start)
+- `Space` — выстрел
+- `Esc` — отпустить курсор
