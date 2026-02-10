@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Переписыватель текста</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Приложение для переписывания текста</h1>
+      <p class="subtitle">
+        Вставьте исходный текст, выберите стиль и получите новую формулировку.
+      </p>
+
+      <section class="controls">
+        <label for="mode">Режим:</label>
+        <select id="mode">
+          <option value="gentle">Аккуратный</option>
+          <option value="formal">Деловой</option>
+          <option value="creative">Креативный</option>
+        </select>
+
+        <label for="intensity">Интенсивность: <span id="intensityValue">2</span></label>
+        <input id="intensity" type="range" min="1" max="3" value="2" />
+      </section>
+
+      <section class="editor-grid">
+        <div>
+          <label for="sourceText">Исходный текст</label>
+          <textarea id="sourceText" placeholder="Например: Наш сервис помогает быстро находить решения сложных задач."></textarea>
+        </div>
+        <div>
+          <label for="resultText">Переписанный текст</label>
+          <textarea id="resultText" readonly></textarea>
+        </div>
+      </section>
+
+      <section class="buttons">
+        <button id="rewriteBtn">Переписать</button>
+        <button id="copyBtn" class="secondary">Скопировать результат</button>
+        <button id="clearBtn" class="secondary">Очистить</button>
+      </section>
+
+      <p id="status" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
