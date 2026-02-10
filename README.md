@@ -33,3 +33,10 @@
 - `Space` — прыжок
 - `Left Mouse` — выстрел
 - `Esc` — разблокировать курсор
+
+
+## Файл запуска
+- Linux/macOS: `./start_unity_project.sh`
+- Windows: `start_unity_project.bat`
+
+Если Unity не найден в PATH, укажи путь к бинарнику через переменную `UNITY_BIN`.
